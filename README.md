@@ -1,16 +1,17 @@
-# React + Vite
+# Rakshita Portfolio 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
 
-Currently, two official plugins are available:
+| Tool | Purpose |
+|---|---|
+| **React 18** | UI library — all sections are components |
+| **Vite** | Build tool & dev server (fast hot reload) |
+| **Tailwind CSS** | Utility classes for responsive layouts |
+| **JSX** | HTML-like syntax inside JavaScript files |
+| **CSS Variables** | Design tokens (colors, spacing) in `:root {}` |
+| **Google Fonts** | Bebas Neue, Outfit, JetBrains Mono |
+| **IntersectionObserver API** | Scroll reveal animations |
+| **React Hooks** | useState, useEffect, useRef |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
