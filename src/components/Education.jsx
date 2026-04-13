@@ -44,7 +44,7 @@ function Education() {
                 className="mono"
                 style={{
                   fontSize: '.7rem', letterSpacing: '.1em', color: 'var(--lime)',
-                  border: '1px solid rgba(200,255,0,0.25)', padding: '4px 12px',
+                  border: '1px solid rgba(158, 114, 195,0.25)', padding: '4px 12px',
                   display: 'inline-block', marginBottom: 6,
                 }}
               >

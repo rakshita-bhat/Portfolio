@@ -6,8 +6,8 @@
 /* ── CSS Variables (Design Tokens) ─────────────────────────────── */
 :root {
   --bg:      #05070f;
-  --lime:    #C8FF00;
-  --lime2:   #DBFF4D;
+  --lime:    #924DBF;
+  --lime2:   #7338A0;
   --white:   #F0F0F2;
   --grey:    #9090A8;
   --muted:   #4A4A60;
@@ -66,7 +66,7 @@ body::before {
 #cursor-ring {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(200, 255, 0, 0.35);
+  border: 1px solid rgba(158, 114, 195, 0.5);
   border-radius: 50%;
   position: fixed;
   top: 0; left: 0;
@@ -195,7 +195,7 @@ body::before {
   transition: transform 0.35s ease;
 }
 .pcard:hover {
-  border-color: rgba(200, 255, 0, 0.2);
+  border-color: rgba(158, 114, 195, 0.4);
   background: rgba(200, 255, 0, 0.025);
   transform: translateX(3px);
 }
@@ -206,14 +206,15 @@ body::before {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   line-height: 1;
-  color: rgba(200, 255, 0, 0.12);
+  color:rgba(158, 114, 195, 0.2)
+  ;
   position: absolute;
   right: 24px; bottom: 12px;
   pointer-events: none;
   user-select: none;
   transition: color 0.3s ease;
 }
-.pcard:hover .pnum { color: rgba(200, 255, 0, 0.2); }
+.pcard:hover .pnum { color: #9E72C3; }
 
 /* ── Section Watermark ─────────────────────────────────────────── */
 .sec-wm {
@@ -246,7 +247,7 @@ body::before {
 .btn-lime:hover {
   background: var(--lime2);
   transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 rgba(200, 255, 0, 0.3);
+  box-shadow: 4px 4px 0 rgba(158, 114, 195, 0.4);
 }
 .btn-ol {
   border: 1px solid var(--lime);
@@ -267,7 +268,7 @@ body::before {
   background: var(--lime);
   color: #05070f;
   transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 rgba(200, 255, 0, 0.25);
+  box-shadow: 4px 4px 0 rgba(158, 114, 195, 0.3);
 }
 
 /* ── Filter Buttons (Projects section) ─────────────────────────── */
@@ -325,14 +326,15 @@ body::before {
   position: relative;
   transition: border-color 0.3s ease;
 }
-.ecard:hover { border-color: rgba(200, 255, 0, 0.2); }
+.ecard:hover { border-color: #9E72C3; }
+
 
 /* ── Stack Badge (tech chips on project cards) ─────────────────── */
 .sbadge {
   font-family: 'JetBrains Mono', monospace;
   font-size: .65rem;
   background: rgba(200, 255, 0, 0.08);
-  border: 1px solid rgba(200, 255, 0, 0.18);
+  border: 1px solid #9E72C3; 
   color: var(--lime);
   padding: 3px 9px;
   border-radius: 2px;
@@ -374,7 +376,8 @@ body::before {
   overflow: hidden;
   transition: border-color 0.3s;
 }
-.stat-box:hover { border-color: rgba(200, 255, 0, 0.2); }
+.stat-box:hover { border-color: #9E72C3; }
+
 .stat-box::after {
   content: '';
   position: absolute;
@@ -395,108 +398,4 @@ body::before {
   font-size: .6rem;
   padding: 2px 8px;
   letter-spacing: .08em;
-}
-
-
-
-/* ════════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — below 640px
-   ════════════════════════════════════════════════════════════════ */
-@media (max-width: 640px) {
-
-  /* ── Section watermark hidden (too large on mobile) ─────────── */
-  .sec-wm { display: none !important; }
-
-  /* ── Hero: stack vertically, photo on top ───────────────────── */
-  .hero-grid {
-    display: flex !important;
-    flex-direction: column-reverse !important;
-    gap: 32px !important;
-  }
-  .photo-col {
-    align-items: center !important;
-  }
-  .photo-wrap {
-    width: 200px !important;
-    height: 240px !important;
-  }
-  .photo-wrap::after {
-    top: 10px; left: 10px;
-    right: -10px; bottom: -10px;
-  }
-  .stat-grid {
-    max-width: 100% !important;
-  }
-
-  /* ── Buttons: full width ────────────────────────────────────── */
-  .btn-lime,
-  .btn-ol {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* ── Two-column grids collapse to single column ─────────────── */
-  .about-grid,
-  .edu-cols,
-  .contact-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 32px !important;
-  }
-
-  /* ── Projects grid: single column ──────────────────────────── */
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* ── Skills grid: single column ─────────────────────────────── */
-  .skills-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* ── Footer: stack ───────────────────────────────────────────── */
-  .footer-inner {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  /* ── Section padding reduction ───────────────────────────────── */
-  section { padding-top: 60px !important; padding-bottom: 60px !important; }
-
-  /* ── Navbar wordmark: tighter ────────────────────────────────── */
-  .wordmark-name { font-size: .52rem !important; letter-spacing: .1em !important; }
-  .wordmark-sub  { font-size: .44rem !important; }
-}
-
-/* ════════════════════════════════════════════════════════════════
-   TABLET — 641px to 900px
-   ════════════════════════════════════════════════════════════════ */
-@media (min-width: 641px) and (max-width: 900px) {
-
-  .hero-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 40px !important;
-  }
-  .photo-col {
-    align-items: center !important;
-  }
-  .photo-wrap {
-    width: 220px !important;
-    height: 270px !important;
-  }
-
-  .about-grid,
-  .contact-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 40px !important;
-  }
-
-  .edu-cols {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
-  }
 }

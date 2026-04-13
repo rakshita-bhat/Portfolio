@@ -21,7 +21,7 @@ function Footer() {
       >
       {/* Brand mark */}
       <span className="bebas lime" style={{ fontSize: '1.1rem', letterSpacing: '.08em' }}>
-        RSB<span style={{ color: 'rgba(200,255,0,0.4)' }}>.</span>
+        RSB<span style={{ color: 'rgba(158, 114, 195,0.4)' }}>.</span>
       </span>
 
       {/* Copyright */}
